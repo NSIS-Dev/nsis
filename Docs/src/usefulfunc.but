@@ -49,7 +49,7 @@
 \c ;   Call IsDotNETInstalled
 \c ;   Pop $0 ; 0 or 1
 \c ;   StrCmp $0 1 found_dotNETFramework_v1_or_v2 no_dotNETFramework
-\c 
+\c
 \c Function IsDotNETInstalled
 \c   Push $0
 \c   System::Call '"$SysDir\MSCOREE.dll"::GetCORVersion(w,i${NSIS_MAX_STRLEN},*i)i.r0?u'
@@ -75,38 +75,38 @@
 
 \H{connectinternet} Connect to the Internet
 
-\c  ; ConnectInternet (uses Dialer plug-in) - Written by Joost Verburg 
+\c  ; ConnectInternet (uses Dialer plug-in) - Written by Joost Verburg
 \c  ;
 \c  ; This function attempts to make a connection to the internet if there is no
 \c  ; connection available. If you are not sure that a system using the installer
 \c  ; has an active internet connection, call this function before downloading
 \c  ; files with NSISdl.
-\c  ; 
+\c  ;
 \c  ; The function requires Internet Explorer 3, but asks to connect manually if
 \c  ; IE3 is not installed.
-\c  
+\c
 \c  Function ConnectInternet
-\c  
+\c
 \c    Push $R0
-\c      
+\c
 \c      ClearErrors
 \c      Dialer::AttemptConnect
 \c      IfErrors noie3
-\c      
+\c
 \c      Pop $R0
 \c      StrCmp $R0 "online" connected
 \c        MessageBox MB_OK|MB_ICONSTOP "Cannot connect to the internet."
 \c        Quit ; This will quit the installer. You might want to add your own error handling.
-\c      
+\c
 \c      noie3:
-\c    
+\c
 \c      ; IE3 not installed
 \c      MessageBox MB_OK|MB_ICONINFORMATION "Please connect to the internet now."
-\c      
+\c
 \c      connected:
-\c    
+\c
 \c    Pop $R0
-\c    
+\c
 \c  FunctionEnd
 
 \H{multipleinstances} Prevent Multiple Instances
@@ -115,7 +115,7 @@ Put the following code in your \R{oninit}{.onInit function}:
 
 \c  System::Call 'kernel32::CreateMutex(p 0, i 0, t "myMutex") p .r1 ?e'
 \c  Pop $R0
-\c  
+\c
 \c  StrCmp $R0 0 +3
 \c    MessageBox MB_OK|MB_ICONEXCLAMATION "The installer is already running."
 \c    Abort
@@ -124,4 +124,4 @@ Put the following code in your \R{oninit}{.onInit function}:
 
 \H{morefuncs} More
 
-You can find more useful scripts on \W{https://nsis.sourceforge.io/wiki/}{the NSIS Wiki}, \W{http://forums.winamp.com/forumdisplay.php?s=&forumid=65}{the NSIS forum} and the \W{https://nsis.sourceforge.io/}{NSIS development page}.
+You can find more useful scripts on \W{https://nsis.sourceforge.io/wiki/}{the NSIS Wiki}, \W{https://forums.winamp.com/forum/developer-center/nsis-discussion}{the NSIS forum} and the \W{https://nsis.sourceforge.io/}{NSIS development page}.

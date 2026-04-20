@@ -44,7 +44,7 @@ static inline bool IsWin95() { return SupportsW95() && (GetVersion() & (0x8000FF
 
 // Defines
 #define NSIS_URL     "https://nsis.sourceforge.io/"
-#define NSIS_FORUM_URL "http://forums.winamp.com/forumdisplay.php?forumid=65"
+#define NSIS_FORUM_URL "https://forums.winamp.com/forum/developer-center/nsis-discussion"
 #define NSIS_UC_URL  "https://nsis.sourceforge.io/update.php?version="
 #define NSIS_DL_URL  "https://nsis.sourceforge.io/download/"
 #ifdef UNICODE

@@ -205,7 +205,7 @@ ${SetCtlColors} $0 ${CT_PAGE} ${CB_PAGE}
 !insertmacro CreateHeader "Online Help" ${UX_W}
 !insertmacro CreateSimpleLink "Developer Center" "${WWW}/Developer_Center" ${UX_W}
 !insertmacro CreateSimpleLink "FAQ" "${WWW}/FAQ" ${UX_W}
-!insertmacro CreateSimpleLink "Forum" "http://forums.winamp.com/forumdisplay.php?forumid=65" ${UX_W}
+!insertmacro CreateSimpleLink "Forum" "https://forums.winamp.com/forum/developer-center/nsis-discussion" ${UX_W}
 ;"Project Tracker" "http://sourceforge.net/tracker/?group_id=22049"
 !insertmacro CreateSimpleLink "Bug Tracker" "http://sourceforge.net/tracker/?group_id=22049&atid=373085" ${UX_W}
 !insertmacro CreateSimpleLink "Stackoverflow" "http://stackoverflow.com/questions/tagged/nsis" ${UX_W}
