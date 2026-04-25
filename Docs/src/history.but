@@ -1,5 +1,15 @@
 \A{history} Changelog and Release Notes
 
+\H{v3.13} 3.13
+
+Released on ???? ??th, ????
+
+\S1{v3.13-cl} Changelog
+
+\S2{} Build System
+
+\b TARGET_ARCH is used as the default makensis target (\W{http://sf.net/p/nsis/patches/314}{patch #314}, \W{http://sf.net/p/nsis/bugs/1294}{bug #1294})
+
 \H{v3.12} 3.12
 
 Released on April 19th, 2026
