@@ -1,4 +1,4 @@
-﻿﻿;Language: Italian (1040)
+﻿;Language: Italian (1040)
 
 ;Review and update from v1.65 to v1.67 by Alessandro Staltari < staltari (a) geocities.com >
 ;Review and update v.1.67 by SANFACE <sanface@sanface.com>
