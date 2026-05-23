@@ -31,10 +31,10 @@
 
 struct version_string_list;
 
-class CVersionStrigList : public SortedStringListND<struct version_string_list>
+class CVersionStringList : public SortedStringListND<struct version_string_list>
 {
 public:
-  ~CVersionStrigList();
+  ~CVersionStringList();
 
   /**
    * Add a version_string_list struct referred to by langid.  Then add the
@@ -77,7 +77,7 @@ public:
 class CResourceVersionInfo 
 {
   VS_FIXEDFILEINFO m_FixedInfo;
-  CVersionStrigList m_ChildStringLists;
+  CVersionStringList m_ChildStringLists;
     
 public:
   CResourceVersionInfo();

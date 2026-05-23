@@ -488,7 +488,7 @@ class CEXEBuild {
      * @param lang [in/out] Language ID reference.  If LANG_NEUTRAL, it gets
      * set to thelast used language ID.
      * @param create Create a new LanguageTable?  Default = true.
-     * @return Appropriate LanguagTable* if exists, otherwise NULL.
+     * @return Appropriate LanguageTable* if exists, otherwise NULL.
      */
     LanguageTable *GetLangTable(LANGID &lang, bool create = true);
 

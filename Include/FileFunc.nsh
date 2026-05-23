@@ -255,11 +255,11 @@ RefreshShellIcons
 	!verbose pop
 !macroend
 
-!macro BannerTrimPathCall _PATH _LENGHT _RESULT
+!macro BannerTrimPathCall _PATH _LENGTH _RESULT
 	!verbose push
 	!verbose ${_FILEFUNC_VERBOSE}
 	Push `${_PATH}`
-	Push `${_LENGHT}`
+	Push `${_LENGTH}`
 	${CallArtificialFunction} BannerTrimPath_
 	Pop ${_RESULT}
 	!verbose pop

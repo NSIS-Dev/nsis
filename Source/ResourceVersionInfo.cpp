@@ -44,7 +44,7 @@ struct version_string_list
   DefineList *pChildStrings;
 };
 
-CVersionStrigList::~CVersionStrigList()
+CVersionStringList::~CVersionStringList()
 {
   struct version_string_list *itr = (struct version_string_list *) m_gr.get();
   int i = m_gr.getlen() / sizeof(struct version_string_list);
@@ -55,7 +55,7 @@ CVersionStrigList::~CVersionStrigList()
   }
 }
 
-int CVersionStrigList::add(LANGID langid, int codepage)
+int CVersionStringList::add(LANGID langid, int codepage)
 {
   TCHAR Buff[10];
   _stprintf(Buff, _T("%04x"), langid);
@@ -69,32 +69,32 @@ int CVersionStrigList::add(LANGID langid, int codepage)
   return pos;
 }
 
-LANGID CVersionStrigList::get_lang(int idx)
+LANGID CVersionStringList::get_lang(int idx)
 {
   version_string_list *data=(version_string_list *)m_gr.get();
   return data[idx].lang_id;
 }
 
-int CVersionStrigList::get_codepage(int idx)
+int CVersionStringList::get_codepage(int idx)
 {
   version_string_list *data=(version_string_list *)m_gr.get();
   return data[idx].codepage;
 }
 
-DefineList* CVersionStrigList::get_strings(int idx)
+DefineList* CVersionStringList::get_strings(int idx)
 {
   version_string_list *data=(version_string_list *)m_gr.get();
   return data[idx].pChildStrings;
 }
 
-int CVersionStrigList::find(LANGID lang_id, int codepage)
+int CVersionStringList::find(LANGID lang_id, int codepage)
 {
   TCHAR Buff[10];
   _stprintf(Buff, _T("%04x"), lang_id);
   return SortedStringListND<struct version_string_list>::find(Buff);
 }
 
-int CVersionStrigList::getnum()
+int CVersionStringList::getnum()
 {
   return m_gr.getlen()/sizeof(struct version_string_list);
 }

@@ -30,7 +30,7 @@ class CLZInWindow
 protected:
   Byte  *_buffer;   // Pointer to virtual Buffer begin
   UInt32 _blockSize;  // Size of Allocated memory block
-  UInt32 _pos;             // offset (from _buffer) of curent byte
+  UInt32 _pos;             // offset (from _buffer) of current byte
   UInt32 _keepSizeBefore;  // how many BYTEs must be kept in buffer before _pos
   UInt32 _keepSizeAfter;   // how many BYTEs must be kept buffer after _pos
   UInt32 _streamPos;   // offset (from _buffer) of first not read byte from Stream
@@ -58,8 +58,8 @@ public:
     _pos++;
     if (_pos > _posLimit)
     {
-      const Byte *pointerToPostion = _buffer + _pos;
-      if(pointerToPostion > _pointerToLastSafePosition)
+      const Byte *pointerToPosition = _buffer + _pos;
+      if(pointerToPosition > _pointerToLastSafePosition)
         MoveBlock();
       return ReadBlock();
     }
